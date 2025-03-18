@@ -1,0 +1,48 @@
+<div class="container">
+    <h2>Inscription</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <!-- Champ Nom -->
+      <div class="form-group">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" class="form-control"
+          formControlName="name">
+        <div *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched" class="error">
+          Le nom est requis.
+        </div>
+      </div>
+  
+      <!-- Champ Email -->
+      <div class="form-group">
+        <label for="email">Email :</label>
+        <input type="email" id="email" class="form-control"
+          formControlName="email">
+        <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched" class="error">
+          Entrez un email valide.
+        </div>
+      </div>
+  
+      <!-- Champ Mot de passe -->
+      <div class="form-group">
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" class="form-control"
+          formControlName="password">
+        <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched" class="error">
+          Le mot de passe doit contenir au moins 6 caractères.
+        </div>
+      </div>
+  
+      <!-- Champ Confirmation Mot de passe -->
+      <div class="form-group">
+        <label for="confirmPassword">Confirmer le mot de passe :</label>
+        <input type="password" id="confirmPassword" class="form-control"
+          formControlName="confirmPassword">
+        <div *ngIf="signupForm.get('confirmPassword')?.invalid && signupForm.get('confirmPassword')?.touched" class="error">
+          Les mots de passe ne correspondent pas.
+        </div>
+      </div>
+  
+      <!-- Bouton d'inscription -->
+      <button type="submit" [disabled]="signupForm.invalid">S'inscrire</button>
+    </form>
+  </div>
+  

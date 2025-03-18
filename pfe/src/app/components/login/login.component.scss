@@ -1,0 +1,121 @@
+/* Style général */
+.container {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Section gauche avec image */
+.left-section {
+  flex: 1;
+  background: url('/assets/img/loginn.jpg') no-repeat center center/cover;
+}
+
+/* Section droite avec le formulaire */
+.right-section {
+  flex: 1;
+  background: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Titre "Welcome" stylisé */
+.welcome-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #007BFF; /* Bleu */
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/* Animation de l'icône de l'avion */
+.plane {
+  display: inline-block;
+  font-size: 24px;
+  animation: fly 2s infinite alternate ease-in-out;
+}
+
+/* Effet de vol */
+@keyframes fly {
+  0% { transform: translateX(0px) translateY(0px); }
+  100% { transform: translateX(15px) translateY(-5px); }
+}
+
+/* Connexion */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Espacement entre les champs */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Champs de saisie */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Bouton stylisé */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+
+}
+/* Connexion via réseaux sociaux */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.social-login a {
+  width: 40px;
+  height: 40px;
+  background: #f1f1f1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+/* Messages d'erreur */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+/* Section droite avec le formulaire */
+.right-section {
+  flex: 1;
+  background: #e0f7fa; /* Bleu cyan clair */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+}

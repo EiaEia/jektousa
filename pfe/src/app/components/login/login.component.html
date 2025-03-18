@@ -1,0 +1,56 @@
+<div class="container">
+  <!-- Section Gauche avec Image -->
+  <div class="left-section"></div>
+
+  <!-- Section Droite avec Formulaire -->
+  <div class="right-section">
+    
+    <!-- Welcome Title avec Avion -->
+    <div class="welcome-title">
+      Welcome <span class="plane">✈️</span>
+    </div>
+
+    
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="form-container">
+      
+      <!-- Champ Email -->
+      <div class="form-group">
+        
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" class="form-control"
+          [(ngModel)]="user.email" required #email="ngModel">
+        <div *ngIf="email.invalid && email.touched" class="error">
+          L'email est requis et doit être valide.
+        </div>
+      </div>
+
+      <!-- Champ Mot de passe -->
+      <div class="form-group">
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" class="form-control"
+          [(ngModel)]="user.password" required minlength="6" #password="ngModel">
+        <div *ngIf="password.invalid && password.touched" class="error">
+          Le mot de passe doit contenir au moins 6 caractères.
+        </div>
+      </div>
+
+      <!-- Bouton de connexion -->
+      <div class="button-container">
+        <button type="submit" [disabled]="loginForm.invalid">Se connecter</button>
+      </div>
+
+      <!-- Connexion via réseaux sociaux -->
+      <div class="social-login">
+        <a href="#"><img src="https://img.icons8.com/color/48/google-logo.png" width="24px" alt="Google"></a>
+        <a href="#"><img src="https://img.icons8.com/color/48/facebook-new.png" width="24px" alt="Facebook"></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/mac-os.png" width="24px" alt="Apple"></a>
+      </div>
+
+    </form>
+
+    <!-- Lien d'inscription -->
+    <div class="link-container">
+      Vous n'avez pas un compte ? <a href="signup">S'inscrire</a>
+    </div>
+  </div>
+</div>

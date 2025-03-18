@@ -1,0 +1,103 @@
+.header {
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+  padding: 20px;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.contact-info {
+  border-radius: 8px; /* Coins arrondis */
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacement entre l'icône et le texte */
+}
+
+.contact-info i {
+  color: #070808ef; /* Bleu pour icônes */
+  font-size: 18px;
+}
+
+.links-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  margin: auto;
+}
+
+.links-card nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.links-card nav ul li {
+  padding: 10px 15px;
+  position: relative;
+}
+
+.links-card nav ul li:not(.home-icon, .cart-icon, .profile-icon) {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.links-card nav ul li:first-child {
+  border-left: none;
+}
+
+.links-card nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+
+
+.links-card .home-icon a,
+.links-card .cart-icon a,
+.links-card .profile-icon a {
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
